@@ -1,7 +1,7 @@
 {
   "description": "An example using GraphQL-Voyager",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.js",
+    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js",
     "generate": "apollo-codegen download-schema http://95.163.250.49:8081/api/graphql --output ./shema.json"
   },
   "dependencies": {
