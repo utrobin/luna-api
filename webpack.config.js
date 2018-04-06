@@ -1,7 +1,6 @@
+const path = require('path');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-
-const root = require('../../build/helpers').root;
 
 module.exports = {
   devtool: 'cheap-source-map',
@@ -10,7 +9,7 @@ module.exports = {
     hints: false
   },
   devServer: {
-    contentBase: root('example/webpack-example/'),
+    contentBase: path.resolve(__dirname, './'),
     watchContentBase: true,
     port: 9090,
     stats: 'errors-only'
@@ -20,7 +19,7 @@ module.exports = {
   },
   entry: ['./index.jsx'],
   output: {
-    path: root('example/webpack-example/dist'),
+	  path: path.resolve(__dirname, './'),
     filename: 'main.js',
     sourceMapFilename: '[file].map'
   },

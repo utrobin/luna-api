@@ -3,3 +3,5 @@
 shema.json
 node_modules
 .idea
+main*
+voyager.worker.js
